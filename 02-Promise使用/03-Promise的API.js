@@ -14,6 +14,7 @@
    3. Promise.prototype.catch方法: (onRejected) => {}
        onRejected函数: 失败的回调函数 (reason) => {}
        说明: then()的语法糖, 相当于: then(undefined, onRejected)
+             catch也是返回一个新的Promise对象
 
    4. Promise.resolve方法: (value) => {}
        value: 成功的数据或promise对象

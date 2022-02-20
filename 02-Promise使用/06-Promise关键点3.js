@@ -9,23 +9,45 @@
  *
  *  Note： .then()返回的就是一个新的Promise对象
  */
+// new Promise((resolve, reject) => {
+//   resolve(1)
+//   // reject(1)
+// }).then(
+//     value => {
+//       console.log('onResolved1()', value) // 没有return值，默认返回一个undefined ｜ return undefined === return Promise.resolve(undefined)
+//       // return 2
+//       // return Promise.resolve(3)
+//       // return Promise.reject(4)
+//       // throw 5
+//     },
+//     reason => {
+//       console.log('onRejected1()', reason)
+//       // return 2
+//       // return Promise.resolve(3)
+//       // return Promise.reject(4)
+//       // throw 5
+//     }
+// ).then(
+//     value => {
+//       console.log('onResolved2()', value)
+//     },
+//     reason => {
+//       console.log('onRejected2()', reason)
+//     }
+// )
+console.log("--------")
+
 new Promise((resolve, reject) => {
-  resolve(1)
-  // reject(1)
+  reject(1)
 }).then(
     value => {
-      console.log('onResolved1()', value) // 没有return值，默认返回一个undefined ｜ return undefined === return Promise.resolve(undefined)
-      // return 2
-      // return Promise.resolve(3)
-      // return Promise.reject(4)
-      // throw 5
+      console.log('onResolved1()', value)
+      // return 1
     },
     reason => {
       console.log('onRejected1()', reason)
-      // return 2
-      // return Promise.resolve(3)
-      // return Promise.reject(4)
-      // throw 5
+      return Promise.resolve(2)
+      // return Promise.reject(2)
     }
 ).then(
     value => {
