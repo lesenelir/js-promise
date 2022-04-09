@@ -66,6 +66,7 @@ async function fn4() { // 使用await一定要用async函数
 fn4()
 
 // 2. await得到失败的结果
+// async 和 await 如果要得到失败的结果，需要用 try catch
 async function fn5() {
   return Promise.reject(4)
 }
