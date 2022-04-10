@@ -66,7 +66,6 @@
 
   }
 
-
   // 向外暴露Promise函数
   window.Promise = Promise
 })(window)
