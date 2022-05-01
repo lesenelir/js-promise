@@ -82,7 +82,8 @@ class MyPromise {
   }
 
   // 函数对象的all方法
-  static all(promiseArr) {
+  // 函数对象的all方法 返回一个数组
+   static all(promiseArr) {
     return new MyPromise((resolve, reject) => {
       let resArr = new Array(promiseArr.length) // 最大的长度
       let resIndex = 0

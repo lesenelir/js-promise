@@ -11,3 +11,6 @@ function Fn() { // Fn函数
 const fn = new Fn() // Fn 构造函数；fn实例对象
 console.log(Fn.prototype) // Fn函数对象
 Fn.call({}) // Fn函数对象
+
+
+// 【扩展】： 函数对象的__proto__指向Function.prototype
