@@ -18,7 +18,7 @@ new Promise((resolve, reject) => {
       console.log('onResolved1()', value)
       return 2
     },
-    // reason => {throw reason} // 没写失败的回调函数，相当于写这一句话
+    // reason => {throw reason}  // 没写失败的回调函数，相当于写这一句话
     // reason => Promise.reject(reason)
 ).then(
     value => {
